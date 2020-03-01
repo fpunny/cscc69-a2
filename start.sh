@@ -1,0 +1,1 @@
+docker run -it --rm -v $(pwd):/mnt --name CSCC69_A2 valgrind
