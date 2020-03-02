@@ -1,4 +1,6 @@
 *.o
 sim
+traceprogs/*
+!traceprogs/*.c
 swapfile.*
-tr-.ref
+*.ref

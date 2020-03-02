@@ -9,8 +9,8 @@ $(PROGS) : % : %.c
 
 traces: $(PROGS)
 	./runit simpleloop
-	./runit matmul 100
-	./runit blocked 100 25
+	./runit matmul 10
+	./runit blocked 10 5
 
 .PHONY: clean
 clean : 

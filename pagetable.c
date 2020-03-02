@@ -40,21 +40,23 @@ int allocate_frame(pgtbl_entry_t *p) {
 		// Write victim page to swap, if needed, and update pagetable
 		// IMPLEMENTATION DONE
 
-		// Get victim and update counters
 		pgtbl_entry_t *victim = coremap[frame].pte;
+
+		// If dirty, then update swap with frame
 		if (victim->frame & PG_DIRTY) {
+			int offset = swap_pageout(frame, victim->swap_off);
+			assert(offset != INVALID_SWAP);
+			victim->swap_off = offset;
 			evict_dirty_count++;
+		
+		// Else don't worry about it
 		} else {
 			evict_clean_count++;
 		}
 
-		// Put victim into swap
-		int offset = swap_pageout(frame, victim->swap_off);
-		assert(offset != INVALID_SWAP);
-		
 		// Update frame to reflect eviction
-		victim->swap_off = offset;
-		victim->frame &= (~PG_VALID) | (~PG_DIRTY);
+		victim->frame &= ~PG_VALID & ~PG_DIRTY;
+		victim->frame |= PG_ONSWAP;
 
 	}
 
@@ -151,10 +153,9 @@ char *find_physpage(addr_t vaddr, char type) {
 
 	// IMPLEMENTATION DONE
 	// Use top-level page directory to get pointer to 2nd-level page table
-	uintptr_t pde = pgdir[idx].pde;
 
 	// Check if page is in memory, else init
-	if (!(PG_VALID & pde)) {
+	if (!(PG_VALID & pgdir[idx].pde)) {
 		pgdir[idx] = init_second_level();
 	}
 
@@ -172,7 +173,7 @@ char *find_physpage(addr_t vaddr, char type) {
 		// If swap, get it
 		if (PG_ONSWAP & p->frame) {
 			// Check swap load
-			assert(swap_pagein(frame, p->swap_off));
+			assert(swap_pagein(frame, p->swap_off) == 0);
 
 			// Load up the entry & set flags
 			p->frame = (
@@ -183,10 +184,9 @@ char *find_physpage(addr_t vaddr, char type) {
 		// If first access, then load it in memory
 		} else {
 			init_frame(frame, vaddr);
-
-			// Load up the entry & set flags
 			p->frame = (
-				(frame << PAGE_SHIFT) |
+				frame << PAGE_SHIFT |
+				PG_ONSWAP |
 				PG_DIRTY
 			);
 		}
@@ -198,7 +198,7 @@ char *find_physpage(addr_t vaddr, char type) {
 	// Make sure that p is marked valid and referenced. Also mark it
 	// dirty if the access type indicates that the page will be written to.
 	p->frame |= PG_VALID | PG_REF;
-	if (type == 'M' && type == 'S') {
+	if (type == 'M' || type == 'S') {
 		p->frame |= PG_DIRTY;
 	}
 	ref_count++;

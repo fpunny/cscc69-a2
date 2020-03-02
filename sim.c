@@ -52,7 +52,7 @@ void access_mem(char type, addr_t vaddr) {
 	addr_t *checkaddr = (addr_t *)(memptr + sizeof(int));
 
 	if (*checkaddr != vaddr) {
-		fprintf(stderr,"Error, simulated page returned by pagetable lookup doese not have expected value.\n");
+		fprintf(stderr,"Error, simulated page returned by pagetable lookup doese not have expected value. [%lu, %lu]\n", *checkaddr, vaddr);
 	}
 	
 	if (type == 'S' || type == 'M') {
