@@ -3,80 +3,35 @@
 ## Algorithm Tables
 ## Trace File: tr-fib.ref
 ### Algorithm: rand
-| Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count 
-| Dirty Eviction Count |
+| Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count | Dirty Eviction Count |
  |-------------|-------------|----------|-----------|------------|-------------------------|----------------------|
 | 50 |  99.5567 |  78379 |  349 | 299 |  143 |  156 |
 | 100 |  99.7841 |  78558 |  170 | 70 |  7 |  63 |
 | 150 |  99.8171 |  78584 |  144 | 0 |  0 |  0 |
 | 200 |  99.8171 |  78584 |  144 | 0 |  0 |  0 |
 ### Algorithm: fifo
-| Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count 
-| Dirty Eviction Count |
+| Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count | Dirty Eviction Count |
  |-------------|-------------|----------|-----------|------------|-------------------------|----------------------|
 | 50 |  99.5719 |  78391 |  337 | 287 |  132 |  155 |
 | 100 |  99.7853 |  78559 |  169 | 69 |  0 |  69 |
 | 150 |  99.8171 |  78584 |  144 | 0 |  0 |  0 |
 | 200 |  99.8171 |  78584 |  144 | 0 |  0 |  0 |
 ### Algorithm: clock
-| Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count 
-| Dirty Eviction Count |
+| Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count | Dirty Eviction Count |
  |-------------|-------------|----------|-----------|------------|-------------------------|----------------------|
 | 50 |  99.6443 |  78448 |  280 | 230 |  96 |  134 |
 | 100 |  99.8095 |  78578 |  150 | 50 |  0 |  50 |
 | 150 |  99.8171 |  78584 |  144 | 0 |  0 |  0 |
 | 200 |  99.8171 |  78584 |  144 | 0 |  0 |  0 |
 ### Algorithm: lru
-| Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count 
-| Dirty Eviction Count |
+| Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count | Dirty Eviction Count |
  |-------------|-------------|----------|-----------|------------|-------------------------|----------------------|
 | 50 |  99.6710 |  78469 |  259 | 209 |  83 |  126 |
 | 100 |  99.8133 |  78581 |  147 | 47 |  0 |  47 |
 | 150 |  99.8171 |  78584 |  144 | 0 |  0 |  0 |
 | 200 |  99.8171 |  78584 |  144 | 0 |  0 |  0 |
 ### Algorithm: opt
-| Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count 
-| Dirty Eviction Count |
- |-------------|-------------|----------|-----------|------------|-------------------------|----------------------|
-| 50 |  99.7803 |  78555 |  173 | 123 |  19 |  104 |
-| 100 |  99.8158 |  78583 |  145 | 45 |  0 |  45 |
-| 150 |  99.8171 |  78584 |  144 | 0 |  0 |  0 |
-| 200 |  99.8171 |  78584 |  144 | 0 |  0 |  0 |
-### Algorithm: rand
-| Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count 
-| Dirty Eviction Count |
- |-------------|-------------|----------|-----------|------------|-------------------------|----------------------|
-| 50 |  99.5567 |  78379 |  349 | 299 |  143 |  156 |
-| 100 |  99.7841 |  78558 |  170 | 70 |  7 |  63 |
-| 150 |  99.8171 |  78584 |  144 | 0 |  0 |  0 |
-| 200 |  99.8171 |  78584 |  144 | 0 |  0 |  0 |
-### Algorithm: fifo
-| Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count 
-| Dirty Eviction Count |
- |-------------|-------------|----------|-----------|------------|-------------------------|----------------------|
-| 50 |  99.5719 |  78391 |  337 | 287 |  132 |  155 |
-| 100 |  99.7853 |  78559 |  169 | 69 |  0 |  69 |
-| 150 |  99.8171 |  78584 |  144 | 0 |  0 |  0 |
-| 200 |  99.8171 |  78584 |  144 | 0 |  0 |  0 |
-### Algorithm: clock
-| Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count 
-| Dirty Eviction Count |
- |-------------|-------------|----------|-----------|------------|-------------------------|----------------------|
-| 50 |  99.6443 |  78448 |  280 | 230 |  96 |  134 |
-| 100 |  99.8095 |  78578 |  150 | 50 |  0 |  50 |
-| 150 |  99.8171 |  78584 |  144 | 0 |  0 |  0 |
-| 200 |  99.8171 |  78584 |  144 | 0 |  0 |  0 |
-### Algorithm: lru
-| Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count 
-| Dirty Eviction Count |
- |-------------|-------------|----------|-----------|------------|-------------------------|----------------------|
-| 50 |  99.6710 |  78469 |  259 | 209 |  83 |  126 |
-| 100 |  99.8133 |  78581 |  147 | 47 |  0 |  47 |
-| 150 |  99.8171 |  78584 |  144 | 0 |  0 |  0 |
-| 200 |  99.8171 |  78584 |  144 | 0 |  0 |  0 |
-### Algorithm: opt
-| Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count 
-| Dirty Eviction Count |
+| Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count | Dirty Eviction Count |
  |-------------|-------------|----------|-----------|------------|-------------------------|----------------------|
 | 50 |  99.7803 |  78555 |  173 | 123 |  19 |  104 |
 | 100 |  99.8158 |  78583 |  145 | 45 |  0 |  45 |
