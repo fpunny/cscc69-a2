@@ -39,7 +39,7 @@ _Trace File: tr-simpleloop.ref_
 | 200         | 63.9453  | 1846709   | 1041243    | 2887952                 | 1040082              | 1111                 |
 
 
-### Exact Lru
+### Exact LRU
 _Trace File: tr-blocked.ref_
 | Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count | Dirty Eviction Count |
 |-------------|----------|-----------|------------|-------------------------|----------------------|----------------------|
@@ -113,7 +113,7 @@ _Trace File: tr-simpleloop.ref_
 | 200         | 63.9453  | 1846709   | 1041243    | 2887952                 | 1040082              | 1111                 |
 
 
-### OPT
+### FIFO
 _Trace File: tr-blocked.ref_
 | Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count | Dirty Eviction Count |
 |-------------|----------|-----------|------------|-------------------------|----------------------|----------------------|
@@ -131,7 +131,7 @@ _Trace File: tr-grep.ref_
 | 150         | 63.9453  | 1846709   | 1041243    | 2887952                 | 1040082              | 1111                 |
 | 200         | 63.9453  | 1846709   | 1041243    | 2887952                 | 1040082              | 1111                 |
 
-### FIFO
+
 _Trace File: tr-matmul.ref_
 | Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count | Dirty Eviction Count |
 |-------------|----------|-----------|------------|-------------------------|----------------------|----------------------|
