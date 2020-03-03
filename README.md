@@ -166,7 +166,7 @@ RAND had the worst preformance due to the fact RAND could not take advantage of 
 | Algorithm | Overall Performance |
 |---|---|
 | OPT  | Fastest |
-| Exact LRU | Fast |
+| Exact LRU | Faster |
 | Clock (with one ref-bit) | Fast |
 | FIFO | Slow |
 | RAND | Slowest |
