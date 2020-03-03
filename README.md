@@ -159,12 +159,15 @@ Overall, OPT was the most optimal due to it selecting the page which was not bei
 
 FIFO did worse than both Exact LRU & Clock (with one ref-bit) since FIFO was using the page's first reference time rather than the page's last reference time which was a more optimal algorithm/page selection choice.
 
+
+
 | Algorithm | Overall Performance |
 |---|---|
 | OPT  | Fastest |
 | Exact LRU | Fast |
 | Clock (with one ref-bit) | Medium |
 | FIFO | Slow |
+| RAND | Slowest |
 
 ## LRU Data Analysis With Increasing Memory
 As the data suggests, the hit rate of the Exact LRU Algorithm increases with increasing memory. This is due to the algorithm's improved replacement decision since increasing memory provides it with more storage of recently used pages. The LRU algorithm does not perform well if the data being reused within a relatively small time duration is low but with more memory, it would still have improved performance. Aside from OPT, LRU outperformed the other algorithms and when running on the matmul algorithm with a memory size of 100 and 150, there was a huge jump in performance due to a reduction in the eviction count since 1 entire matrix could be stored in memory. There was not a big difference between 150 and 200 in terms of memory size as the extra space was more of a stagnation point for the data size being tested. In conclusion, Exact LRU's Algorithm increases in performance as memory increases. The lower the memory, the lower the hit count & the higher the eviction count.
