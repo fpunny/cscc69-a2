@@ -167,4 +167,4 @@ FIFO did worse than both Exact LRU & Clock (with one ref-bit) due to the fact th
 | FIFO | Slow |
 
 ## LRU Data Analysis With Increasing Memory
-
+As the data suggests, the hit rate of the Exact LRU Algorithm increases with increasing memory. This is due to the algorithem's improved replacement decision since increasing memory provides it with more storage of recently used pages. The LRU algorithm does not preform well if the data being reused within a relatively small time duration is low but with more memory it would still have an improved preformace. Aside from OPT, LRU outpreformed the other algorithms and when run on the matmul algorithem in relation to a memory size of 100 and 150, there was a huge jump in preformance due to a reduction in the eviction count since 1 entire matrix could be stored in memory. There was not a big difference between 150 and 200 in terms of memory size as the extra space was more of a stagnation point for the data size being tested. In conclusion, Exact LRU's Algorithm increases in preformance as memory increases. The lower the memory, the lower the hit count & the higher the eviction count.
