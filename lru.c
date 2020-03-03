@@ -5,12 +5,12 @@
 #include <stdlib.h>
 #include "pagetable.h"
 
-
+extern struct frame *coremap;
 extern int memsize;
-
 extern int debug;
 
-extern struct frame *coremap;
+unsigned int *timestamps = NULL;
+unsigned int time = 0;
 
 /* Page to evict is chosen using the accurate LRU algorithm.
  * Returns the page frame number (which is also the index in the coremap)
@@ -18,8 +18,13 @@ extern struct frame *coremap;
  */
 
 int lru_evict() {
-	
-	return 0;
+	unsigned int frame = 0;
+	for (int i = 1; i < memsize; i++) {
+		if (timestamps[i] < timestamps[frame]) {
+			frame = i;
+		}
+	}
+	return frame;
 }
 
 /* This function is called on each access to a page to update any information
@@ -27,7 +32,7 @@ int lru_evict() {
  * Input: The page table entry for the page that is being accessed.
  */
 void lru_ref(pgtbl_entry_t *p) {
-
+	timestamps[p->frame >> PAGE_SHIFT] = ++time;
 	return;
 }
 
@@ -36,4 +41,5 @@ void lru_ref(pgtbl_entry_t *p) {
  * replacement algorithm 
  */
 void lru_init() {
+	timestamps = malloc(memsize * sizeof(unsigned int));
 }
