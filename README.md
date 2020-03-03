@@ -2,7 +2,7 @@
 
 ## Algorithm Tables
 
-##Trace File: tr-simpleloop.ref
+## Trace File: tr-simpleloop.ref
 ### Algorithm: rand
 | Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count | Dirty Eviction Count |
  |-------------|-------------|----------|-----------|------------|-------------------------|----------------------|
@@ -39,7 +39,7 @@
 | 150 |  74.3083 |  7627 |  2637 | 2487 |  0 |  2487 |
 | 200 |  74.3083 |  7627 |  2637 | 2437 |  0 |  2437 |
 
-##Trace File: tr-matmul.ref
+## Trace File: tr-matmul.ref
 ### Algorithm: rand
 | Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count | Dirty Eviction Count |
  |-------------|-------------|----------|-----------|------------|-------------------------|----------------------|
@@ -76,7 +76,7 @@
 | 150 |  99.0786 |  2861342 |  26610 | 26460 |  25379 |  1081 |
 | 200 |  99.3331 |  2868692 |  19260 | 19060 |  17980 |  1080 |
 
-##Trace File: tr-blocked.ref
+## Trace File: tr-blocked.ref
 ### Algorithm: rand
 | Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count | Dirty Eviction Count |
  |-------------|-------------|----------|-----------|------------|-------------------------|----------------------|
