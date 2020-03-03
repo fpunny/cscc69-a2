@@ -13,8 +13,8 @@ Exact LRU on average preformed very well (close to OPT) but it is costly to impl
 |---|---|
 | OPT  | Fastest |
 | Exact LRU | Fast |
-| FIFO | Medium |
-| Clock (with one ref-bit) | Slow |
+| Clock (with one ref-bit) | Medium |
+| FIFO | Slow |
 
 ## LRU Data Analysis With Increasing Memory
 
