@@ -149,6 +149,42 @@ _Trace File: tr-simpleloop.ref_
 | 150         | 63.9453  | 1846709   | 1041243    | 2887952                 | 1040082              | 1111                 |
 | 200         | 63.9453  | 1846709   | 1041243    | 2887952                 | 1040082              | 1111                 |
 
+### RAND
+_Trace File: tr-blocked.ref_
+| Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count | Dirty Eviction Count |
+|-------------|----------|-----------|------------|-------------------------|----------------------|----------------------|
+| 50          | 71.2295  | 7311   | 2953    | 2903                 | 208              | 2695                 |
+| 100         |73.1586  | 7509   | 2755    | 2655                 | 48              | 2607                 |
+| 150         |73.6068  | 7555   | 2709    | 2559                 | 21              | 2538                 |
+| 200         | 73.6458  | 7559   | 2705    | 2505                 | 17              | 2488                 |
+
+
+_Trace File: tr-grep.ref_
+| Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count | Dirty Eviction Count |
+|-------------|----------|-----------|------------|-------------------------|----------------------|----------------------|
+| 50          | 63.9453  | 1846709   | 1041243    | 2887952                 | 1040082              | 1111                 |
+| 100         | 63.9453  | 1846709   | 1041243    | 2887952                 | 1040082              | 1111                 |
+| 150         | 63.9453  | 1846709   | 1041243    | 2887952                 | 1040082              | 1111                 |
+| 200         | 63.9453  | 1846709   | 1041243    | 2887952                 | 1040082              | 1111                 |
+
+
+_Trace File: tr-matmul.ref_
+| Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count | Dirty Eviction Count |
+|-------------|----------|-----------|------------|-------------------------|----------------------|----------------------|
+| 50          | 65.5241  | 1892306   | 995646    | 2887952                 | 956275              | 39321                 |
+| 100         | 88.7958  | 2564381   | 323571    | 2887952                 | 316013              | 7458                 |
+| 150         | 63.9453  | 2792128   | 95824    | 2887952                 | 93310              | 2364                 |
+| 200         | 63.9453  | 2831200   | 56752    | 2887952                 | 54928              | 1624                 |
+
+
+_Trace File: tr-simpleloop.ref_
+| Memory Size | Hit Rate | Hit Count | Miss Count | Overall Eviction Count  | Clean Eviction Count | Dirty Eviction Count |
+|-------------|----------|-----------|------------|-------------------------|----------------------|----------------------|
+| 50          | 71.2295  | 7311   | 2953    | 2903                 | 208              | 2695                 |
+| 100         |73.1586  | 7509   | 2755    | 2655                 | 48              | 2607                 |
+| 150         |73.6068  | 7555   | 2709    | 2559                 | 21              | 2538                 |
+| 200         | 73.6458  | 7559   | 2705    | 2505                 | 17              | 2488                 |
+
 ## Algorithms Comparison
 Using OPT as the yardstick, we can see that 
 FIFO suffered from "Belady's Anomaly" as the Miss Count increased when the algorithm was given more memory.
