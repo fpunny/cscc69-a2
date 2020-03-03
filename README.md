@@ -159,7 +159,9 @@ Overall, OPT was the most optimal due to it selecting the page which was not bei
 
 FIFO did worse than both Exact LRU & Clock (with one ref-bit) since FIFO was using the page's first reference time rather than the page's last reference time which was a more optimal algorithm/page selection choice.
 
+One thing to note is that LRU and Clock had basically a hit rate of about the same in most cases because the algorithm logic is fairly similiar (LRU removes oldest page = Clock removes page that is old enough).
 
+RAND had the worst preformance due to the fact RAND could not take advantage of locality to increase hit counts. For Example: In tr-simpleloop, RAND preformed the worst since the locality of the data being provided was not taken into account during page selection.
 
 | Algorithm | Overall Performance |
 |---|---|
