@@ -155,6 +155,10 @@ FIFO suffered from "Belady's Anomaly" as the Miss Count increased when the algor
 Clock (with one ref-bit) had a low overhead when given more memory.
 Exact LRU on average preformed very well (close to OPT) but it is costly to implement.
 
+Overall, OPT was the most optimal due to it selecting the page which was not being used for the longest time (As it 'sees' into the future and will always pick the best possible choice). OPT has the lowest miss count due to the choice of eviction selection.
+
+FIFO did worse than both Exact LRU & Clock (with one ref-bit) due to the fact that FIFO was using the page's first reference time rather than the page's last reference time which was a more optimal algorithem / page selection choice.
+
 | Overall | Performance |
 |---|---|
 | OPT  | Fastest |
