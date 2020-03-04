@@ -19,12 +19,14 @@ int clock_index = 0;
 int clock_evict() {
 	pgtbl_entry_t *page = coremap[clock_index].pte;
 
+	// Search for page that has not been referenced
 	while(page->frame & PG_REF) {
 		page->frame &= ~PG_REF;
 		clock_index = (clock_index + 1) % memsize;
 		page = coremap[clock_index].pte;
 	}
 
+	// Once found, return that frame and move clock to next frame
 	int _index = clock_index;
 	clock_index = (clock_index + 1) % memsize;
 	return _index;

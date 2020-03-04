@@ -4,3 +4,4 @@ traceprogs/*
 !traceprogs/*.c
 swapfile.*
 *.ref
+*.txt

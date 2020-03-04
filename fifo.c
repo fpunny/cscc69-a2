@@ -9,6 +9,8 @@ extern struct frame *coremap;
 extern int memsize;
 extern int debug;
 
+// This is not a typo, since we are incrementing first,
+// this allows for us to get the ball rolling on 0
 int queue_index = -1;
 
 /* Page to evict is chosen using the fifo algorithm.

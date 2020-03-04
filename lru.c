@@ -18,6 +18,7 @@ unsigned int time = 0;
  */
 
 int lru_evict() {
+	// Find the smallest time (oldest) and boot it
 	unsigned int frame = 0;
 	for (int i = 1; i < memsize; i++) {
 		if (timestamps[i] < timestamps[frame]) {
@@ -32,6 +33,7 @@ int lru_evict() {
  * Input: The page table entry for the page that is being accessed.
  */
 void lru_ref(pgtbl_entry_t *p) {
+	// Update time to update memory
 	timestamps[p->frame >> PAGE_SHIFT] = ++time;
 	return;
 }
@@ -41,5 +43,6 @@ void lru_ref(pgtbl_entry_t *p) {
  * replacement algorithm 
  */
 void lru_init() {
+	// Make timestamps size of memory
 	timestamps = malloc(memsize * sizeof(unsigned int));
 }
